@@ -61,7 +61,7 @@ public class BaiHatDB extends SQLiteOpenHelper {
 
     public void xoaBaiHat(String maBH) {
         SQLiteDatabase db = this.getWritableDatabase();
-        String sql = "delete from " + tableName + " where " + col_maBH + " = " + maBH + ";";
+        String sql = "delete from " + tableName + " where " + col_maBH + " = '" + maBH + "';";
         db.execSQL(sql);
         db.close();
     }
